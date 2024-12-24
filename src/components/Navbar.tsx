@@ -23,9 +23,13 @@ export default function Navbar() {
           <Link href="/" className="flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold text-primary"
+              className="text-xl font-bold text-primary h-12"
             >
-              Pallex AB
+              <img 
+                src="/logo1.png"
+                alt="Company Logo"
+                className="h-full w-auto object-contain"
+              />
             </motion.div>
           </Link>
           

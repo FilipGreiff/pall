@@ -17,7 +17,8 @@ const productDetails = {
       "Specialmått enligt önskemål",
       "Hög kvalitet och hållbarhet",
       "Snabba leveranser"
-    ]
+    ],
+    image: "/pall.jpg"
   },
   pallkragar: {
     title: "Pallkragar",
@@ -29,7 +30,8 @@ const productDetails = {
       "Målning enligt önskemål",
       "Både nya och begagnade alternativ",
       "Lagerförda standardstorlekar"
-    ]
+    ],
+    image: "/pallkrage.jpg"
   },
   "lock-mellanlagg": {
     title: "Lock & Mellanlägg",
@@ -41,7 +43,8 @@ const productDetails = {
       "Hög kvalitet",
       "Kostnadseffektiva lösningar",
       "Snabb leverans"
-    ]
+    ],
+    image: "/lock.jpg"
   },
   specialemballage: {
     title: "Specialemballage",
@@ -53,7 +56,8 @@ const productDetails = {
       "Specialkonstruktioner",
       "Flexibla material",
       "Prototypframtagning"
-    ]
+    ],
+    image: "/special.png"
   }
 };
 
@@ -122,9 +126,12 @@ export default function ProductDetail() {
             animate={{ opacity: 1, x: 0 }}
             className="relative"
           >
-            <div className="aspect-square rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-              <div className="absolute inset-0 bg-[url('/images/warehouse-pattern.svg')] opacity-20" />
-              <div className="absolute inset-0 bg-[url('/images/texture-pattern.svg')] opacity-10" />
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>

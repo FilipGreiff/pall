@@ -10,28 +10,28 @@ const products = [
     title: "Lastpallar",
     description: "Standardmått och specialanpassade lastpallar",
     features: ["1200 x 800mm", "800 x 600mm", "Nya & begagnade", "Export-godkända"],
-    image: "pallet.jpg"
+    image: "/eur-pallet.jpg"
   },
   {
     id: 'pallkragar',
     title: "Pallkragar",
     description: "Nya och begagnade standardkragar",
     features: ["Värmebehandlade", "Export-godkända", "Företagslogga möjlig", "Målning möjlig"],
-    image: "collar.jpg"
+    image: "/pallkrage.jpg"
   },
   {
     id: 'lock-mellanlagg',
     title: "Lock & Mellanlägg",
     description: "Kvalitetsprodukter i olika material",
     features: ["Plywood", "OSB", "Masonite", "Påspikade ribbor"],
-    image: "lid.jpg"
+    image: "/lock.jpg"
   },
   {
     id: 'specialemballage',
     title: "Specialemballage",
     description: "Skräddarsydda lösningar",
     features: ["Kundanpassat", "Flexibla mått", "Specialkonstruktioner", "Teknisk rådgivning"],
-    image: "special.jpg"
+    image: "/special.png"
   }
 ];
 
@@ -47,8 +47,12 @@ export default function ProductGrid() {
           transition={{ delay: index * 0.1 }}
           className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
         >
-          <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/5 relative">
-            <div className="absolute inset-0 bg-[url('/images/texture-pattern.svg')] opacity-10" />
+          <div className="aspect-[4/3] relative">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
           
           <div className="p-6">
